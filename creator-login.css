@@ -1,0 +1,255 @@
+body{
+    font-family: inter;
+    margin: 0px;
+    padding: 0px;
+    
+}
+.container{
+    margin: 20px 50px;
+    background-color: white;
+}
+.logo{
+    display: flex;
+    flex-direction: row;   
+}
+.logo img{
+  height: 150px;
+    width: 150px;
+    position: relative;
+    top: -10%
+}
+.brand-header1{
+   
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.brand-header2{
+ 
+    font-size: 17px;
+    font-weight: 600;
+    
+}
+.progress-line{
+    height: auto;
+    margin: 30px 0px 30px 0px;
+   
+}
+.stepper-wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    
+    color: white;
+  }
+  .stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+  
+  .stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: -50%;
+    z-index: 2;
+  }
+  
+  .stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+  }
+  
+  .stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ccc;
+    margin-bottom: 6px;
+  }
+  
+  .stepper-item.active {
+    font-weight: bold;
+  }
+  
+  .stepper-item.completed .step-counter {
+    background-color: #02284d;
+  }
+  
+  .stepper-item.completed::after {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid #02284d;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 3;
+  }
+  
+  .stepper-item:first-child::before {
+    content: none;
+  }
+  .stepper-item:last-child::after {
+    content: none;
+  }
+.form-brand{
+    display: flex;
+    flex-direction: column;
+}
+.form-brand p{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.form-brand input{
+    border: none;
+    background-color: rgba(211, 211, 211, 0.281);
+    width: 100%;
+    color: rgb(49, 49, 49);
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+}
+.form-brand form{
+  border: none;
+  color: rgb(49, 49, 49);
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  height: 45px;
+  margin-left: -10px;
+}
+/* Dropdown button style */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Dropdown button text */
+.dropbtn {
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  height: 45px;
+  font-size: 15px;
+  margin-left: -10px;
+  background-color: rgba(211, 211, 211, 0.281);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-left: -10px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(49, 49, 49);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgba(211, 211, 211, 0.281);
+}
+
+/* Show the dropdown menu (use JS to add this class to the dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+.brand-buttons{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+ margin-top: 40px;
+}
+.btn {
+  position: relative;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all .2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+ 
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,40,77,1) 44%, rgba(2,60,98,1) 61%, rgba(2,73,111,1) 100%);
+ }
+ 
+ .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,40,77,1) 44%, rgba(2,60,98,1) 61%, rgba(2,73,111,1) 100%);
+ }
+ 
+ .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,40,77,1) 44%, rgba(2,60,98,1) 61%, rgba(2,73,111,1) 100%);
+ }
+ 
+ .btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+ }
+ 
+ .btn::after {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,40,77,1) 44%, rgba(2,60,98,1) 61%, rgba(2,73,111,1) 100%);
+ }
+ 
+ .btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+ }

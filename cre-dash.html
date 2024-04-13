@@ -1,0 +1,150 @@
+<!-- this is creators dashboard -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cre-dash.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="logo"></a></div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#">Dashboard</a></li>
+                <li class="nav-item"><a href="#">Services</a></li>
+                <li class="nav-item"><a href="#">About Us</a></li>
+                <li class="nav-item"><a href="#">
+                        <div class="W46fKfn cK9KPQl"><span class="_5-fo9i5">
+                                <div class="uy3dNJC" style="border-radius:50%">
+                                    <figure style="font-size:32px;background-color:#C14A83" class="imghRPs"
+                                        title="iamtanmay_22">
+                                        <figcaption class="-nS+a5p">i</figcaption><img class="_2Um2N63"
+                                            src="assets/images/profile.png" alt="iamtanmay_22" loading="lazy">
+                                    </figure>
+                                    <div class="cCSTnnY rHv1-nv" style="bottom:-2px;right:-2px">
+                                        <div style="border-width:2px;width:8px;height:8px" class="G1NyNb1 fQXZI8+">
+                                        </div>
+                                    </div>
+                                </div>
+                            </span></div>
+                    </a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="page">
+        <div class="smallbox">
+            <div class="profilebox">
+
+                <div class="profile-container">
+                    <div class="profile-icon">
+                        <a href=""> <img id="profile-img" src="assets/images/profile.png" alt="User Profile Image"></a>
+                    </div>
+
+                    <div class="username">
+                        <a href="">
+                            <span>Harry Albert</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="info-display">
+
+
+                    <div class="bio">
+                        <h5>Bio</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium mollitia illo
+                            consequatur fuga sunt quae corporis recusandae possimus voluptate.
+                        </p>
+
+                    </div>
+                    <div class="rating">
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5"></label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4"></label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3"></label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2"></label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn">
+
+
+                <button>
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <a href="freelancer-land.html" style="text-decoration: none; color: inherit;">
+                        <span class="label" >Hire Freelancer</span></a>
+                </button>
+
+                <br>
+                <button>
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <span class="label">Collab With Brands</span>
+                </button>
+            </div>
+
+            <div class="earn">
+                <div><span>Earning till now</span></div>
+                <div><span> $5</span></div>
+
+
+
+            </div>
+
+        </div>
+        <div class="bigbox">
+
+            <div class="navbar2">
+                <a href="#" id="activeCollab" class="nav-option active" onclick="showContent('activegig')">Active
+                    Collab</a>
+                <a href="#" id="pastCollab" class="nav-option" onclick="showContent('pastdeals')">Past Collab</a>
+            </div>
+            <div id="activegig">hello</div>
+            <div id="pastdeals">world</div>
+        </div>
+
+
+    </div>
+    <script>
+        let activeContent = 'activegig'; // Initially show 'activegig'
+
+        function showContent(contentId) {
+            // Toggle visibility of content divs
+            document.getElementById(activeContent).style.display = 'none'; // Hide previous content
+            document.getElementById(contentId).style.display = 'block'; // Show new content
+            activeContent = contentId;
+
+            // Update active state in navbar
+            const navOptions = document.querySelectorAll('.nav-option');
+            navOptions.forEach(option => {
+                option.classList.remove('active');
+            });
+            document.getElementById(activeContent).classList.add('active');
+        }
+
+    </script>
+</body>
+
+</html>
